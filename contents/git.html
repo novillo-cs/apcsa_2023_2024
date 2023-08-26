@@ -1,0 +1,72 @@
+<h1>Git</h1>
+<p>It is an open-source version control system that tracks changes in any set of computer files, usually used for coordinating work among programmers collaboratively developing source code during software development.</p>
+
+<h1>GitHub</h1>
+<p>It is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere. This tutorial teaches you GitHub essentials like repositories, branches, commits, and pull requests.
+</p>
+
+<h1>Installing Git</h1>
+<p><b>Mac and Linux:</b> Git should be installed already.</p>
+<p><b>Windows:</b> Install git and the shell gitbash from <a href="https://gitforwindows.org/">here</a>.
+This includes git, gitbash, and has shell integration so that you can right-click on a folder in Windows Explorer to access gitbash at that location.</p>
+
+
+<h1>Git commands</h1>
+<p><b>The git config command</b></p>
+<pre>
+git config --global user.name "YOUR_NAME_HERE"
+git config --global user.email YOUR_EMAIL_HERE
+</pre>
+
+<p>The basic commands we are going to use in this class are:</p>
+
+<ul>
+    <li><b>git clone:</b> Retrieve an entire repository from a hosted location via URL.</li>
+    <li><b>git pull:</b> Fetch and merge any commits from the tracking remote branch.</li>
+    <li><b>git add:</b> Add a file as it looks now to your next commit (stage).</li>
+    <li><b>git commit:</b> Commit your staged content as a new commit snapshot.</li>
+    <li><b>git push:</b> Transmit local branch commits to the remote repository branch.</li>
+</ul>
+
+<p>Your may take a look at the git reference <a href="https://education.github.com/git-cheat-sheet-education.pdf">sheet</a>.</p>
+
+<h1>Connect to GitHub with SSH</h1>
+
+<p>Follow these steps to create an ssh key, connect to GitHub using SSH, and clone your repository.</p>
+<ol>
+    <li>
+        Create your ssh key: Open your terminal and type
+        <pre>ssh-keygen -t rsa</pre>
+        Check if your key was generated:
+        <pre>
+        cd .ssh/
+        ls
+        </pre>
+        
+        <p>You should see your private key (id_rsa) and public key (id_rsa.pub) inside that directory.</p>
+    </li>
+    <li>
+        <p>Log in to your GitHub account.</p>
+        <p>Click on your profile picture (right-top). You will see a menu; click on Settings.</p>
+        <p>You will see a menu on the left. Click on SSH and GPG keys and click on Add New SSH key.</p>
+        <p>You will give a title to that key. The key type should be "Authentication Key" and copy your public key (the content inside the file id_rsa.pub) in the field "Key".</p>
+        
+    </li>
+    <li>
+        <p>Go to the following <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/testing-your-ssh-connection">link</a> and test your SSH connection.</p>
+    </li>
+
+    <li>
+       <p>Let's clone your repository on your local computer:</p>
+       <p>Go to your assignments repository that you created for this class in GitHub. You will see a green button, "Code". You must click on that button and select SSH to have the appropriate link that will allow you to clone your repository and copy the link you see there.</p>
+        
+    </li>
+    <li>
+        <p>On your terminal, go inside the folder you want to clone your repository and type:</p>
+        <pre> git clone PASTE_THE_LINK_YOU_COPIED_FROM_GITHUB_(git@...) </pre>
+                 
+     </li>
+     <li>
+         <p>Go inside the folder that appears after you execute the clone command, and you will see the files you have on your GitHub repository.</p>
+     </li>
+</ol>
