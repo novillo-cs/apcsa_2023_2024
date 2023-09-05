@@ -34,6 +34,9 @@
         </button>
         <div class="collapse" id="dashboard-collapse">
           <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <li><a data-bs-toggle="collapse" href="#piazza"
+                   class="link-dark d-inline-flex text-decoration-none rounded">Piazza</a>
+            </li>
             <li><a data-bs-toggle="collapse" href="#git"
                    class="link-dark d-inline-flex text-decoration-none rounded">Git and SSH</a>
             </li>
@@ -82,6 +85,9 @@
         <div class="collapse show" id="notes" data-bs-parent="#rightSide">
             <div id="notes_html"></div>
         </div>
+        <div class="collapse" id="piazza" data-bs-parent="#rightSide">
+            <div id="piazza_html"></div>
+        </div>
         <div class="collapse" id="git" data-bs-parent="#rightSide">
             <div id="git_html"></div>
         </div>
@@ -114,6 +120,7 @@
         $(function(){
             $("#notes_html").load("contents/notes.html")
             $("#repo_html").load("contents/repo.html")
+            $("#piazza_html").load("contents/piazza.html")
             $("#git_html").load("contents/git.html")
             $("#homework_html").load("contents/homework.html")
             $("#labs_html").load("contents/labs.html")
