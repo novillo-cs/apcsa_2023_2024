@@ -40,6 +40,9 @@
             <li><a data-bs-toggle="collapse" href="#git"
                    class="link-dark d-inline-flex text-decoration-none rounded">Git and SSH</a>
             </li>
+            <li><a data-bs-toggle="collapse" href="#commands"
+                   class="link-dark d-inline-flex text-decoration-none rounded">Linux Commands</a>
+            </li>
           </ul>
         </div>
       </li>
@@ -91,6 +94,9 @@
         <div class="collapse" id="git" data-bs-parent="#rightSide">
             <div id="git_html"></div>
         </div>
+        <div class="collapse" id="commands" data-bs-parent="#rightSide">
+            <div id="commands_html"></div>
+        </div>
         <div class="collapse" id="homework" data-bs-parent="#rightSide">
             <div id="homework_html"></div>
         </div> 
@@ -122,6 +128,7 @@
             $("#repo_html").load("contents/repo.html")
             $("#piazza_html").load("contents/piazza.html")
             $("#git_html").load("contents/git.html")
+            $("#commands_html").load("contents/commands.html")
             $("#homework_html").load("contents/homework.html")
             $("#labs_html").load("contents/labs.html")
             $("#rules_html").load("contents/rules.html")
